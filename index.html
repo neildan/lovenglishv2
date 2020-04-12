@@ -62,6 +62,10 @@
 
     <!-- Inicio : Cotenido -->
     <div class="container">
+        <p id="requireHTTPS" class="hidden">
+            <b>STOP!</b> This page <b>must</b> be served over HTTPS.
+            Please <a>reload this page via HTTPS</a>.
+          </p>
         <h1 class="mt-2 text-center color-blue-dark">
             🇬🇧 LovEnglish <span class="color-red-dark">♥</span>
         </h1>
@@ -129,6 +133,13 @@
         </div>
     </div>
     <!-- Fin : Cotenido -->
+
+    <!-- Install button, hidden by default -->
+    <div id="installContainer" class="hidden">
+        <button id="butInstall" type="button">
+            Install
+        </button>
+    </div>
 
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

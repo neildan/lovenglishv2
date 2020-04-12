@@ -16,7 +16,7 @@
     color: #102d4e !important;
 }
 
-.color-red-dark{
+.color-red-dark {
     color: #cf3633 !important;
 }
 
@@ -65,8 +65,7 @@ header>nav>div>span {
 
 /* Inicio : Tamaño Letra */
 
-h4,
-h5 {
+h4, h5 {
     font-family: 'Friendly-Schoolmates';
     font-size: 2em;
     color: #212529;
@@ -110,8 +109,7 @@ audio {
 
 /* Inicio : Scrollbar */
 
-.custom-scrollbar-js,
-.custom-scrollbar-css {
+.custom-scrollbar-js, .custom-scrollbar-css {
     height: 500px;
 }
 
@@ -134,15 +132,33 @@ audio {
 
 /* Fin : Scrollbar */
 
+.hidden {
+    display: none !important;
+}
+
+#installContainer {
+    position: absolute;
+    bottom: 1em;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#installContainer button {
+    background-color: inherit;
+    border: 1px solid white;
+    color: white;
+    font-size: 1em;
+    padding: 0.75em;
+}
+
 /*Estilos adaptativos*/
 
 /* Versión Móvil */
 
 @media (max-width: 575px) {
     /* Inicio : Tamaño Letra */
-    h1,
-    h2,
-    h3 {
+    h1, h2, h3 {
         font-family: 'Friendly-Schoolmates';
         font-size: 3em;
         color: #212529;
@@ -160,9 +176,7 @@ audio {
 
 @media (min-width: 576px) {
     /* Inicio : Tamaño Letra */
-    h1,
-    h2,
-    h3 {
+    h1, h2, h3 {
         font-family: 'Friendly-Schoolmates';
         font-size: 4em;
         color: #212529;
