@@ -1,0 +1,177 @@
+/* Tipografía contenido */
+
+@font-face {
+    font-family: 'Mithella-Regular';
+    src: url('../fonts/Mithella-Regular.otf');
+}
+
+/* Tipografía titulo */
+
+@font-face {
+    font-family: 'Friendly-Schoolmates';
+    src: url('../fonts/Friendly-Schoolmates.otf');
+}
+
+.color-blue-dark {
+    color: #102d4e !important;
+}
+
+.color-red-dark{
+    color: #cf3633 !important;
+}
+
+body {
+    font-family: 'Mithella-Regular';
+    font-size: 1em;
+    color: #212529;
+}
+
+/* Inicio : NavBar */
+
+.nav-black {
+    background-color: #112d4e !important;
+}
+
+header>nav>button {
+    border: none !important;
+}
+
+header>nav>button>span {
+    background-color: #102d4e !important;
+}
+
+header>nav>a {
+    font-family: 'Friendly-Schoolmates';
+    color: white !important;
+}
+
+header>nav>a:hover {
+    color: #dcd6f7 !important;
+}
+
+header>nav>div>ul>li>a {
+    color: white !important;
+}
+
+header>nav>div>ul>li>a:hover {
+    color: #a6b1e1 !important;
+}
+
+header>nav>div>span {
+    color: white !important;
+}
+
+/* Fin : NavBar */
+
+/* Inicio : Tamaño Letra */
+
+h4,
+h5 {
+    font-family: 'Friendly-Schoolmates';
+    font-size: 2em;
+    color: #212529;
+}
+
+h6 {
+    font-family: 'Friendly-Schoolmates';
+    font-size: 1.6em;
+    color: #212529;
+}
+
+h5>a {
+    font-weight: 400;
+    color: #102d4e;
+    text-decoration: none !important;
+}
+
+/* Fin : Tamaño Letra */
+
+.card-title-color {
+    color: #081826;
+}
+
+.card-title-text-color {
+    color: #03284f;
+}
+
+audio {
+    width: 100%;
+    border-radius: 0.2em;
+    background-color: #f1f3f4;
+    border: solid #969696 0.01em;
+    box-shadow: #dddddd 0px 0px 6px 1px;
+}
+
+.titles {
+    font-family: 'Friendly-Schoolmates';
+    font-size: 2em;
+    color: #102d4e;
+}
+
+/* Inicio : Scrollbar */
+
+.custom-scrollbar-js,
+.custom-scrollbar-css {
+    height: 500px;
+}
+
+.custom-scrollbar-css {
+    overflow-y: scroll;
+}
+
+.custom-scrollbar-css::-webkit-scrollbar {
+    width: 0.65em;
+}
+
+.custom-scrollbar-css::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.custom-scrollbar-css::-webkit-scrollbar-thumb {
+    border-radius: 0px 0px 4px 4px;
+    background-image: linear-gradient(to top, #1b75bb 0%, #112d4e 100%);
+}
+
+/* Fin : Scrollbar */
+
+/*Estilos adaptativos*/
+
+/* Versión Móvil */
+
+@media (max-width: 575px) {
+    /* Inicio : Tamaño Letra */
+    h1,
+    h2,
+    h3 {
+        font-family: 'Friendly-Schoolmates';
+        font-size: 3em;
+        color: #212529;
+    }
+    /* Fin : Tamaño Letra */
+    .btn-link {
+        font-weight: 400;
+        color: #102d4e;
+        text-decoration: none;
+        font-size: 0.5em;
+    }
+}
+
+/* Version Escritorio */
+
+@media (min-width: 576px) {
+    /* Inicio : Tamaño Letra */
+    h1,
+    h2,
+    h3 {
+        font-family: 'Friendly-Schoolmates';
+        font-size: 4em;
+        color: #212529;
+    }
+    /* Fin : Tamaño Letra */
+    .btn-link {
+        font-weight: 400;
+        color: #102d4e;
+        text-decoration: none;
+        font-size: 0.4em;
+    }
+}
