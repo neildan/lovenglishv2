@@ -1,6 +1,6 @@
 ;
 //asignar un nombre y versión al cache
-const CACHE_NAME = 'love_english_cache',
+const cacheName = 'love_english_cache',
   urlsToCache = [
     './index.html',
     './script.js',
@@ -56,78 +56,25 @@ const CACHE_NAME = 'love_english_cache',
     './audios/12/questions.mp3'
   ]
 
-// Durante la fase de instalación, generalmente se almacena en caché los activos estáticos
 self.addEventListener('install', e => {
   e.waitUntil(
-    caches.open(CACHE_NAME)
-      .then(cache => {
-        return cache.addAll(urlsToCache)
-          .then(() => self.skipWaiting())
-      })
-      .catch(err => console.log('Falló registro de cache', err))
-  )
-});
-
-// Una vez que se instala el SW, se activa y busca los recursos para hacer que funcione sin conexión
-self.addEventListener('activate', e => {
-  const cacheWhitelist = [CACHE_NAME]
-
-  e.waitUntil(
-    caches.keys()
-      .then(cacheNames => {
-        return Promise.all(
-          cacheNames.map(cacheName => {
-            //Eliminamos lo que ya no se necesita en cache
-            if (cacheWhitelist.indexOf(cacheName) === -1) {
-              return caches.delete(cacheName)
-            }
-          })
-        )
-      })
-      // Le indica al SW activar el cache actual
-      .then(() => self.clients.claim())
-  )
-});
-
-// Cuando el navegador recupera una url
-self.addEventListener('fetch', e => {
-  //Responder ya sea con el objeto en caché o continuar y buscar la url real
-  e.respondWith(
-    caches.match(e.request)
-      .then(res => {
-        if (res) {
-          //recuperar del cache
-          return res
-        }
-        //recuperar de la petición a la url
-        return fetch(e.request)
-      })
-  )
-});
-
-self.addEventListener("fetch", function(event) {
-  event.respondWith(
-    fetch(event.request).catch(function(error) {
-      console.log(
-        "[Service Worker] Network request Failed. Serving content from cache: " +
-          error
-      );
-      //Check to see if you have it in the cache
-      //Return response
-      //If not in the cache, then return error page
-      return caches
-        .open(
-          "sw-precache-v3-sw-precache-webpack-plugin-https://neildan.github.io/lovenglishv2/"
-        )
-        .then(function(cache) {
-          return cache.match(event.request).then(function(matching) {
-            var report =
-              !matching || matching.status == 404
-                ? Promise.reject("no-match")
-                : matching;
-            return report;
-          });
-        });
+    caches.open(cacheName).then(cache => {
+      return cache.addAll(urlsToCache)
+        .then(() => self.skipWaiting());
     })
+  );
+});
+
+self.addEventListener('activate', event => {
+  event.waitUntil(self.clients.claim());
+});
+
+self.addEventListener('fetch', event => {
+  event.respondWith(
+    caches.open(cacheName)
+      .then(cache => cache.match(event.request, { ignoreSearch: true }))
+      .then(response => {
+        return response || fetch(event.request);
+      })
   );
 });
