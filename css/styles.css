@@ -132,6 +132,7 @@ audio {
 
 /* Fin : Scrollbar */
 
+/* Clases para descargar pagina */
 .hidden {
     display: none !important;
 }
@@ -144,7 +145,7 @@ audio {
     width: 100%;
 }
 
-#installContainer button {
+#installContainer>button {
     background-color: inherit;
     border: 1px solid white;
     color: white;
