@@ -6,7 +6,7 @@
     "theme_color": "#102d4e",
     "orientation": "portrait",
     "display": "standalone",
-    "start_url": "https://neildan.github.io/lovenglishv2/",
+    "start_url": "./index.html",
     "scope": "./",
     "lang": "es-MX",
     "icons": [
