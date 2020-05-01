@@ -12,6 +12,10 @@
     src: url('../fonts/Friendly-Schoolmates.otf');
 }
 
+.icon-title {
+    font-size: 0.7em;
+}
+
 .color-blue-dark {
     color: #102d4e !important;
 }
