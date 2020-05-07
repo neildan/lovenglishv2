@@ -8,7 +8,7 @@
     "display": "standalone",
     "start_url": "./index.html",
     "scope": "./",
-    "lang": "es-MX",
+    "lang": "en-US",
     "icons": [
       {
         "src": "./img/icons/brain-512.png",
