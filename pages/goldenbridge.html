@@ -63,8 +63,26 @@
     <!-- Inicio : Cotenido -->
     <div class="container">
         <h1 class="mt-2">Golden Bridge</h1>
+
+        <!-- Búscador -->
+        <div class="input-group mt-3">
+            <input type="text" class="form-control" placeholder="Busca el audio que quieras"
+                aria-label="Recipient's username with two button addons" aria-describedby="button-addon4"
+                id="buscador_gb">
+            <div class="input-group-append" id="button-addon4">
+                <button class="btn btn-outline-secondary" id="filter-all" onclick="addFilter(this.getAttribute('id'))"
+                    type="button">Todos</button>
+                <button class="btn btn-outline-secondary" id="filter-book-1"
+                    onclick="addFilter(this.getAttribute('id'))" type="button">Libro 1</button>
+                <button class="btn btn-outline-secondary" id="filter-book-2"
+                    onclick="addFilter(this.getAttribute('id'))" type="button">Libro 2</button>
+                <button class="btn btn-outline-secondary" id="filter-book-3"
+                    onclick="addFilter(this.getAttribute('id'))" type="button">Libro 3</button>
+            </div>
+        </div>
+
         <div class="accordion" id="accordionExample">
-            <!-- Historia #1 -->
+            <!-- Libro #1 - Beginners -->
             <div class="card">
                 <div class="card-header" id="headingOne">
                     <h2 class="mb-0">
@@ -76,223 +94,364 @@
                 </div>
                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
                     data-parent="#accordionExample">
-                    <div class="card-body">
+                    <div class="card-body book-1">
                         <h4 class="card-title text-center card-title-color">Beginners</h4>
 
-                        <h6 class='card-title-text-color'>Audio #1</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/1.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #2</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/2.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #3</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/3.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #4</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/4.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #5</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/5.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #6</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/6.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #7</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/7.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #8</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/8.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #9</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/9.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #10</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/10.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #11</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/11.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #12</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/12.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #13</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/13.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #14</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/14.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #15</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/15.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #16</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/16.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #17</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/17.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #18</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/18.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #19</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/19.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #20</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/20.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #21</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/21.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #22</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/22.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #23</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/23.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #24</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/24.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #25</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/25.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #26</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/26.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #27</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/27.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #28</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/28.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #29</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/29.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #30</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/30.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #31</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/31.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #32</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/32.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #33</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/33.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #34</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/34.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #35</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/35.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #36</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/36.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #37</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/37.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #38</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/38.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #39</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/39.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #40</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/40.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #41</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/41.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #42</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/42.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #43</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/43.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #44</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/44.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #45</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/45.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #46</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/46.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #47</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/47.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #48</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/48.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #49</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/49.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #50</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/50.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #51</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/51.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #52</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/52.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #53</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/53.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #54</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/54.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #55</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/55.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #56</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/56.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #57</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/57.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #58</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/58.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #59</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/59.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #60</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/60.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #61</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/61.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #62</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/62.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #63</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/63.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #64</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/64.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #65</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/65.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #66</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/66.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #67</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/67.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #68</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/68.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #69</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/69.mp3' preload='none'
-                            controls></audio>
-                        <h6 class='card-title-text-color'>Audio #70</h6>
-                        <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/70.mp3' preload='none'
-                            controls></audio>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #1</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/1.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #2</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/2.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #3</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/3.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #4</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/4.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #5</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/5.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #6</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/6.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #7</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/7.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #8</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/8.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #9</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/9.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #10</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/10.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #11</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/11.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #12</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/12.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #13</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/13.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #14</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/14.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #15</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/15.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #16</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/16.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #17</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/17.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #18</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/18.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #19</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/19.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #20</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/20.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #21</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/21.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #22</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/22.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #23</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/23.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #24</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/24.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #25</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/25.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #26</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/26.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #27</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/27.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #28</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/28.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #29</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/29.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #30</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/30.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #31</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/31.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #32</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/32.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #33</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/33.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #34</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/34.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #35</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/35.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #36</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/36.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #37</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/37.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #38</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/38.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #39</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/39.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #40</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/40.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #41</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/41.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #42</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/42.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #43</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/43.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #44</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/44.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #45</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/45.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #46</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/46.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #47</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/47.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #48</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/48.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #49</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/49.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #50</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/50.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #51</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/51.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #52</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/52.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #53</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/53.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #54</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/54.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #55</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/55.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #56</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/56.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #57</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/57.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #58</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/58.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #59</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/59.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #60</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/60.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #61</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/61.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #62</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/62.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #63</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/63.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #64</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/64.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #65</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/65.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #66</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/66.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #67</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/67.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #68</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/68.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #69</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/69.mp3' preload='none'
+                                controls></audio>
+                        </span>
+                        <span class="item">
+                            <h6 class='card-title-text-color nombre-audio'>Audio #70</h6>
+                            <audio class='mt-2 mb-2' src='../audios/golden_bridge/book_1/70.mp3' preload='none'
+                                controls></audio>
+                        </span>
                     </div>
                 </div>
             </div>
-            <!-- Historia #2 -->
+
+            <!-- Libro #2 - Intermediate -->
             <div class="card">
                 <div class="card-header" id="headingTwo">
                     <h2 class="mb-0">
@@ -540,7 +699,8 @@
                     </div>
                 </div>
             </div>
-            <!-- Historia #3 -->
+
+            <!-- Libro #3 - Social English -->
             <div class="card">
                 <div class="card-header" id="headingThree">
                     <h2 class="mb-0">
@@ -625,6 +785,42 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+    <script>
+        /**
+         * Cuando se cargue todo el HTML incluidos los audios, se activa la funcionalidad de buscar
+         * Funciona con SessionStorage para saber que en que secciones de audios buscar (Separados por libros)
+         * @author Daniel Valencia <08-05-2020>
+         */
+        $(document).ready(function () {
+            /**
+             * @param int id
+             * @author Daniel Valencia <08-05-2020>
+            */
+            function addFilter(id) {
+                //sessionStorage.setItem()
+            }
+
+            function paintFilters() {
+
+            }
+
+            $('#buscador_gb').keyup(function () {
+                var nombresAudios = $('.nombre-audio');
+                var buscando = $(this).val();
+                var item = '';
+                for (var i = 0; i < nombresAudios.length; i++) {
+                    item = $(nombresAudios[i]).html().toLowerCase();
+                    for (var x = 0; x < item.length; x++) {
+                        if (buscando.length == 0 || item.indexOf(buscando) > -1) {
+                            $(nombresAudios[i]).parents('.item').show();
+                        } else {
+                            $(nombresAudios[i]).parents('.item').hide();
+                        }
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
