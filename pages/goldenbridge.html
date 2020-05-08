@@ -81,7 +81,7 @@
 
         <div class="accordion" id="accordionExample">
             <!-- Libro #1 - Beginners -->
-            <div class="card">
+            <div class="card" id="audios-book-1">
                 <div class="card-header" id="headingOne">
                     <h2 class="mb-0">
                         <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
@@ -90,9 +90,9 @@
                         </button>
                     </h2>
                 </div>
-                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
                     data-parent="#accordionExample">
-                    <div class="card-body book-1">
+                    <div class="card-body">
                         <h4 class="card-title text-center card-title-color">Beginners</h4>
 
                         <span class="item">
@@ -450,7 +450,7 @@
             </div>
 
             <!-- Libro #2 - Intermediate -->
-            <div class="card">
+            <div class="card" id="audios-book-2">
                 <div class="card-header" id="headingTwo">
                     <h2 class="mb-0">
                         <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo"
@@ -460,7 +460,7 @@
                     </h2>
                 </div>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                    <div class="card-body book-2">
+                    <div class="card-body">
                         <h4 class="card-title text-center card-title-color">Intermediate</h4>
 
                         <span class="item">
@@ -853,7 +853,7 @@
             </div>
 
             <!-- Libro #3 - Social English -->
-            <div class="card">
+            <div class="card" id="audios-book-3">
                 <div class="card-header" id="headingThree">
                     <h2 class="mb-0">
                         <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThree"
@@ -863,7 +863,7 @@
                     </h2>
                 </div>
                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                    <div class="card-body book-3">
+                    <div class="card-body">
                         <h4 class="card-title text-center card-title-color">Social English</h4>
 
                         <span class="item">
@@ -973,98 +973,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
-    <script>
-        /**
-         * Cuando se cargue todo el HTML incluidos los audios, se activa la funcionalidad de buscar
-         * Funciona con SessionStorage para saber que en que secciones de audios buscar (Separados por libros)
-         * @author Daniel Valencia <08-05-2020>
-         */
-        $(document).ready(function () {
-            console.log("Hola mundo")
-            /**
-             * Agregar filtro
-             * @param String id
-             * @author Daniel Valencia <08-05-2020>
-            */
-            function addFilter(idButton) {
-                var filters = []
-                var positionFilter = null
-
-                // En caso de que haya algún filtro
-                if (sessionStorage.filters) {
-                    filters = JSON.parse(sessionStorage.filters)
-                    var positionFilter = filters.indexOf(idButton);
-                    // En caso de que toque desmarcar
-                    if (positionFilter != -1) {
-                        filters.splice(positionFilter, 1);
-                    } else {
-                        filters.push(idButton)
-                    }
-                } else {
-                    filters.push(idButton)
-                }
-
-                sessionStorage.setItem('filters', JSON.stringify(filters))
-                paintFilters()
-            }
-
-            /**
-             * Pintar los botone seleccionados
-             * Quitar estilo a los botones que ya no están seleccionados
-             * @author Daniel Valencia <08-05-2020>
-             */
-            function paintFilters() {
-                var filters = []
-                var nameClassStyle = 'boton-filter-selected'
-
-                if (sessionStorage.filters) {
-                    filters = JSON.parse(sessionStorage.filters)
-
-                    filters.forEach(element => {
-                        element = $('#' + element)
-                        if (!element.hasClass(nameClassStyle)) {
-                            element.addClass(nameClassStyle)
-                        }
-                    });
-                } else {
-                    filters = [
-                        'book-1',
-                        'book-2',
-                        'book-3',
-                    ]
-
-                    filters.forEach(element => {
-                        element = $('#' + element)
-                        if (element.hasClass(nameClassStyle)) {
-                            element.removeClass(nameClassStyle)
-                        }
-                    });
-                }
-
-            }
-
-            /**
-             * Cada vez que se escriba una letra en el buscador, este filtrará
-             * @author Daniel Valencia <08-05-2020>
-             */
-            $('#buscador_gb').keyup(function () {
-                var filters = JSON.parse(sessionStorage.getItem('filters'))
-                var audioNames = $('.nombre-audio');
-                var searching = $(this).val();
-                var item = '';
-                for (var i = 0; i < audioNames.length; i++) {
-                    item = $(audioNames[i]).html().toLowerCase();
-                    for (var x = 0; x < item.length; x++) {
-                        if (searching.length == 0 || item.indexOf(searching) > -1) {
-                            $(audioNames[i]).parents('.item').show();
-                        } else {
-                            $(audioNames[i]).parents('.item').hide();
-                        }
-                    }
-                }
-            });
-        });
-    </script>
+    <script src="../js/filter.js"></script>
 </body>
 
 </html>
