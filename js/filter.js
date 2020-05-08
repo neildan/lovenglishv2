@@ -72,11 +72,14 @@ function paintFilters() {
  * @author Daniel Valencia <08-05-2020>
  */
 function hideUnCheckedFilters() {
+  var filtersBase = ["book-1", "book-2", "book-3"];
+  var divCollapses = "id-collapse-";
+  var classShow = "show"
+
   // Si hay filtros
   if (sessionStorage.filters) {
     var filters = [],
-      filtersBase = ["book-1", "book-2", "book-3"];
-    filters = JSON.parse(sessionStorage.filters);
+      filters = JSON.parse(sessionStorage.filters);
     filtersBase.forEach((element) => {
       /**
        * Se busca en 'filters', cada una de las posiciones de filtersBase
@@ -84,7 +87,23 @@ function hideUnCheckedFilters() {
        * Significa que se tiene que ocultar ese div porque no está seleccioado en los filtros
        */
 
-      if (filters.indexOf(element) == -1) $("#audios-" + element).hide();
+      if (filters.indexOf(element) == -1) {
+        $("#audios-" + element).hide();
+        element = $("#" + divCollapses + element)
+        if (element.hasClass(classShow)) {
+          element.removeClass(classShow);
+        }
+      } else {
+        $("#audios-" + element).show();
+        element = $("#" + divCollapses + element)
+        if (!element.hasClass(classShow)) {
+          element.addClass(classShow);
+        }
+      }
+    });
+  } else {
+    filtersBase.forEach((element) => {
+      $("#audios-" + element).show();
     });
   }
 }
