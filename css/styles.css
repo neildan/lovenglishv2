@@ -125,10 +125,10 @@ audio {
 }
 
 .boton-filter-selected {
-  border: none;
-  color: #fff;
-  box-shadow: 0em 0em 0.2em 0em #102d4e;
-  background-color: #102d4e;
+  border: none !important;
+  color: #fff !important;
+  box-shadow: 0em 0em 0.2em 0em #102d4e !important;
+  background-color: #102d4e !important;
 }
 
 /* Fin : botones filtro */
