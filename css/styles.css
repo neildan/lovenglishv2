@@ -111,6 +111,13 @@ audio {
     color: #102d4e;
 }
 
+.boton-filter-selected {
+    border: none;
+    color: #fff;
+    box-shadow: 0em 0em 0.2em 0em #102d4e;
+    background-color: #102d4e;
+}
+
 /* Inicio : Scrollbar */
 
 .custom-scrollbar-js, .custom-scrollbar-css {
