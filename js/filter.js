@@ -5,7 +5,10 @@
  */
 $(document).ready(function () {
   paintFilters();
+  hideUnCheckedFilters();
 });
+
+var filtersBase = ["book-1", "book-2", "book-3"];
 
 /**
  * Agregar filtro
@@ -17,7 +20,7 @@ function addFilter(idButton) {
   var positionFilter = null;
 
   // En caso de que haya algún filtro
-  if (sessionStorage.filters) {
+  if (sessionStorage.filters && sessionStorage.filters != '[]' && sessionStorage.filters != '') {
     filters = JSON.parse(sessionStorage.filters);
     var positionFilter = filters.indexOf(idButton);
 
@@ -45,22 +48,45 @@ function addFilter(idButton) {
 function paintFilters() {
   var filters = [];
   var nameClassStyle = "boton-filter-selected";
+  var nameClassNoStyle = "boton-filter-no-selected";
 
-  if (sessionStorage.filters) {
+  // Buscar los filtros en variable session
+  if (sessionStorage.filters && sessionStorage.filters != '[]' && sessionStorage.filters != '') {
     filters = JSON.parse(sessionStorage.filters);
 
-    filters.forEach((element) => {
-      element = $("#" + element);
-      if (!element.hasClass(nameClassStyle)) {
-        element.addClass(nameClassStyle);
+    // Se recorre los 3 botones,
+    // Si está en filter, significa que toca pintarlo.
+    // Sino lo está entonces toca quitarle el estilo
+    filtersBase.forEach(element => {
+      if (filters.indexOf(element) != -1) {
+        element = $("#" + element);
+        // Si el botón no tiene la clase, entonces se agrega el estilo
+        if (!element.hasClass(nameClassStyle)) {
+          if (element.hasClass(nameClassNoStyle)) {
+            element.removeClass(nameClassNoStyle);
+          }
+          element.addClass(nameClassStyle);
+        }
+      } else {
+        element = $("#" + element);
+        if (element.hasClass(nameClassStyle)) {
+          if (!element.hasClass(nameClassNoStyle)) {
+            element.addClass(nameClassNoStyle);
+          }
+          element.removeClass(nameClassStyle);
+        }
       }
     });
-  } else {
-    filters = ["book-1", "book-2", "book-3"];
 
-    filters.forEach((element) => {
+    // Si no hay variables de session ,
+    // entonces quitar clase pintado a todos los botones
+  } else {
+    filtersBase.forEach((element) => {
       element = $("#" + element);
       if (element.hasClass(nameClassStyle)) {
+        if (!element.hasClass(nameClassNoStyle)) {
+          element.addClass(nameClassNoStyle);
+        }
         element.removeClass(nameClassStyle);
       }
     });
@@ -72,14 +98,13 @@ function paintFilters() {
  * @author Daniel Valencia <08-05-2020>
  */
 function hideUnCheckedFilters() {
-  var filtersBase = ["book-1", "book-2", "book-3"];
   var divCollapses = "id-collapse-";
-  var classShow = "show"
+  var classShow = "show";
 
   // Si hay filtros
-  if (sessionStorage.filters) {
-    var filters = [],
-      filters = JSON.parse(sessionStorage.filters);
+  if (sessionStorage.filters && sessionStorage.filters != '[]' && sessionStorage.filters != '') {
+    var filters = []
+    var filters = JSON.parse(sessionStorage.filters);
     filtersBase.forEach((element) => {
       /**
        * Se busca en 'filters', cada una de las posiciones de filtersBase
@@ -89,13 +114,13 @@ function hideUnCheckedFilters() {
 
       if (filters.indexOf(element) == -1) {
         $("#audios-" + element).hide();
-        element = $("#" + divCollapses + element)
+        element = $("#" + divCollapses + element);
         if (element.hasClass(classShow)) {
           element.removeClass(classShow);
         }
       } else {
         $("#audios-" + element).show();
-        element = $("#" + divCollapses + element)
+        element = $("#" + divCollapses + element);
         if (!element.hasClass(classShow)) {
           element.addClass(classShow);
         }

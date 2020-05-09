@@ -114,9 +114,9 @@ audio {
 
 /* Botones del filtro */
 
-#button-addon > button {
+.boton-filter-no-selected {
   background-color: white;
-  color: #102d4e !important;
+  color: #102d4e;
 }
 
 #button-addon > button:hover {
@@ -126,7 +126,7 @@ audio {
 
 .boton-filter-selected {
   border: none !important;
-  color: #fff !important;
+  color: white !important;
   box-shadow: 0em 0em 0.2em 0em #102d4e !important;
   background-color: #102d4e !important;
 }
