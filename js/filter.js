@@ -4,8 +4,12 @@
  * @author Daniel Valencia <08-05-2020>
  */
 $(document).ready(function () {
-  paintFilters();
-  hideUnCheckedFilters();
+  if (sessionStorage.filterInput && sessionStorage.filterInput != '') {
+    $("#buscador_gb").val(sessionStorage.filterInput)
+  }
+  paintFilters()
+  hideUnCheckedFilters()
+  filterAudios()
 });
 
 var filtersBase = ["book-1", "book-2", "book-3"];
@@ -134,13 +138,17 @@ function hideUnCheckedFilters() {
 }
 
 /**
- * Cada vez que se escriba una letra en el buscador, este filtrará
- * @author Daniel Valencia <08-05-2020>
+ * Filtrar Audios
+ * @author Daniel Valencia <09-05-2020>
  */
-$("#buscador_gb").keyup(function () {
+function filterAudios() {
   var item = "";
-  var searching = $(this).val();
+  var searching = $("#buscador_gb").val();
   var audioNames = $(".nombre-audio");
+
+  if (sessionStorage.filterInput != searching) {
+    sessionStorage.filterInput = searching
+  }
 
   for (var i = 0; i < audioNames.length; i++) {
     item = $(audioNames[i]).html().toLowerCase();
@@ -152,4 +160,4 @@ $("#buscador_gb").keyup(function () {
       }
     }
   }
-});
+}

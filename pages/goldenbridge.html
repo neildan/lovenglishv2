@@ -68,7 +68,7 @@
         <div class="input-group mt-3">
             <input type="text" class="form-control" placeholder="Busca el audio que quieras"
                 aria-label="Recipient's username with two button addons" aria-describedby="button-addon"
-                id="buscador_gb">
+                id="buscador_gb" onkeyup="filterAudios()">
             <div class="input-group-append" id="button-addon">
                 <button class="btn btn-outline-secondary boton-filter-no-selected" id="book-1" onclick="addFilter(this.getAttribute('id'))"
                     type="button">Libro 1</button>
