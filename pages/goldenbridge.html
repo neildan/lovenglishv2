@@ -14,7 +14,7 @@
     <!-- Inicio : Menú -->
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-light nav-black">
-            <a class="navbar-brand" href="../index.html">🇬🇧 LovEnglish ♥</a>
+            <a class="navbar-brand" href="../index.html"><span class="icon-title">🇬🇧</span> LovEnglish <span class="color-red-dark icon-title">♥</span></a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -68,13 +68,13 @@
         <div class="input-group mt-3">
             <input type="text" class="form-control" placeholder="Busca el audio que quieras"
                 aria-label="Recipient's username with two button addons" aria-describedby="button-addon"
-                id="buscador_gb" onkeyup="filterAudios()">
+                id="buscador_gb" onkeyup="FilterGoldenBridge.filterAudios()">
             <div class="input-group-append" id="button-addon">
-                <button class="btn btn-outline-secondary boton-filter-no-selected" id="book-1" onclick="addFilter(this.getAttribute('id'))"
+                <button class="btn btn-outline-secondary boton-filter-no-selected" id="book-1" onclick="FilterGoldenBridge.addFilter(this.getAttribute('id'))"
                     type="button">Libro 1</button>
-                <button class="btn btn-outline-secondary boton-filter-no-selected" id="book-2" onclick="addFilter(this.getAttribute('id'))"
+                <button class="btn btn-outline-secondary boton-filter-no-selected" id="book-2" onclick="FilterGoldenBridge.addFilter(this.getAttribute('id'))"
                     type="button">Libro 2</button>
-                <button class="btn btn-outline-secondary boton-filter-no-selected" id="book-3" onclick="addFilter(this.getAttribute('id'))"
+                <button class="btn btn-outline-secondary boton-filter-no-selected" id="book-3" onclick="FilterGoldenBridge.addFilter(this.getAttribute('id'))"
                     type="button">Libro 3</button>
             </div>
         </div>
