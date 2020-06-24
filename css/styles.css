@@ -159,6 +159,26 @@ audio {
 
 /* Fin : Scrollbar */
 
+/* Inicio : Pildoras Targetas Narnia */
+
+.ul-pills-narnia {
+  margin-top: -0.5rem;
+  background: #f7f7f7;
+  border-radius: 6px;
+}
+
+.ul-pills-narnia > .nav-item > a[class="nav-link"] {
+  color: #0e2d4e;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #102d4e;
+}
+
+/* Fin : Pildoras Targetas Narnia */
+
 /* Clases para descargar pagina */
 .hidden {
   display: none !important;
@@ -200,6 +220,10 @@ audio {
     text-decoration: none;
     font-size: 0.5em;
   }
+
+  .ul-pills-narnia > li {
+    width: 100%;
+  }
 }
 
 /* Version Escritorio */
@@ -219,5 +243,9 @@ audio {
     color: #102d4e;
     text-decoration: none;
     font-size: 0.4em;
+  }
+
+  .ul-pills-narnia > li {
+    width: 33%;
   }
 }
