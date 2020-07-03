@@ -20,8 +20,16 @@
   color: #102d4e !important;
 }
 
+.background-blue-dark {
+  color: #102d4e !important;
+}
+
 .color-red-dark {
   color: #cf3633 !important;
+}
+
+.all-w {
+  width: 100%;
 }
 
 body {
@@ -112,6 +120,34 @@ audio {
   color: #102d4e;
 }
 
+.card-title-course {
+  padding: 0.2em 0px 0px 0.6em;
+}
+
+.shadow-blue-dark {
+  box-shadow: 0em 0em 5px 1px #102d4e;
+}
+
+.border-dashed-t {
+  border-top: 2px #0e2d4e dashed;
+}
+
+.border-dashed-l {
+  border-left: 2px #0e2d4e dashed;
+}
+
+.border-dashed-r {
+  border-right: 2px #0e2d4e dashed;
+}
+
+.border-dashed-b {
+  border-bottom: 2px #0e2d4e dashed;
+}
+
+.border-none {
+  border: none !important;
+}
+
 /* Botones del filtro */
 
 .boton-filter-no-selected {
@@ -180,24 +216,23 @@ audio {
 /* Fin : Pildoras Targetas Narnia */
 
 /* Clases para descargar pagina */
+
 .hidden {
   display: none !important;
 }
 
-#installContainer {
-  position: absolute;
-  bottom: 1em;
-  display: flex;
-  justify-content: center;
+#installContainer > button {
+  background-image: linear-gradient(to top, #1b75bb 0%, #112d4e 100%);
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 0.5em;
   width: 100%;
 }
 
-#installContainer > button {
-  background-color: inherit;
-  border: 1px solid white;
-  color: white;
-  font-size: 1em;
-  padding: 0.75em;
+#installContainer > button > img {
+  width: 3em;
 }
 
 /*Estilos adaptativos*/

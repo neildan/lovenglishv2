@@ -17,9 +17,8 @@ var cacheFiles = [
   './img/icons/brain-128.png',
   './img/icons/brain-256.png',
   './img/icons/brain-512.png',
+  './img/icons/download.png',
   './js/jquery.mCustomScrollbar.concat.min.js',
-  './pages/narnia.html',
-  './pages/goldenbridge.html'
 ]
 
 

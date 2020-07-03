@@ -23,9 +23,11 @@
     <!-- Inicio : Menú -->
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-light nav-black">
-            <a class="navbar-brand" href="./index.html"><span class="icon-title">🇬🇧</span> LovEnglish <span class="color-red-dark icon-title">♥</span></a>
+            <a class="navbar-brand" href="./index.html"><span class="icon-title">🇬🇧</span> LovEnglish <span
+                    class="color-red-dark icon-title">♥</span></a>
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -41,15 +43,23 @@
                         <a class="nav-link" href="./pages/goldenbridge.html">Golden Bridge</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Herramientas
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="./pages/youtube.html">Canales de Youtube</a>
                             <a class="dropdown-item" href="./pages/lyricstraining.html">Lyrics Training</a>
-                            <a class="dropdown-item" target="_blank" href="https://www.englishforeveryone.online/?redirect=0">Platafora Golden Bridge</a>
-                            <a class="dropdown-item" target="_blank" href="https://www.facebook.com/pg/goldenbridge.englishforeveryone/videos/?ref=page_internal">Interactions</a>
-                            <a class="dropdown-item" target="_blank" href="https://translate.google.com.co/?hl=en-GB&tab=TT">Tradutor</a>
+                            <a class="dropdown-item" target="_blank" href="https://mis.amigosingleses.com/">Amigos
+                                Ingleses</a>
+                            <a class="dropdown-item" target="_blank" href="https://tophonetics.com/es/">Fonetica
+                                Britanica</a>
+                            <a class="dropdown-item" target="_blank"
+                                href="https://www.englishforeveryone.online/?redirect=0">Platafora Golden Bridge</a>
+                            <a class="dropdown-item" target="_blank"
+                                href="https://www.facebook.com/pg/goldenbridge.englishforeveryone/videos/?ref=page_internal">Interactions</a>
+                            <a class="dropdown-item" target="_blank"
+                                href="https://translate.google.com.co/?hl=en-GB&tab=TT">Tradutor</a>
                         </div>
                     </li>
                     <li class="nav-item">
@@ -66,89 +76,174 @@
 
     <!-- Inicio : Cotenido -->
     <div class="container">
-        <p id="requireHTTPS" class="hidden">
-            <b>STOP!</b> This page <b>must</b> be served over HTTPS.
-            Please <a>reload this page via HTTPS</a>.
-        </p>
+        <!-- Install button -->
+        <div id="installContainer" class="mt-1 hidden">
+            <button id="butInstall" type="button">
+                <img src="./img/icons/download.png" alt="button_download">
+                Instalar <span class="icon-title">🇬🇧</span> LovEnglish <span class="color-red-dark">♥</span>
+            </button>
+        </div>
+
         <h1 class="mt-2 text-center color-blue-dark">
             <span class="icon-title">🇬🇧</span> LovEnglish <span class="color-red-dark">♥</span>
         </h1>
+
         <h2 class="titles">Instrucciones de uso</h2>
-        <p>Instrucciones para utilizar las historias interactivas de Narnia, un mundo magico para aprender ingles, cuenta con 12 historias, cada una con una duración de 1 a 2 semanas.</p>
+        <p>LovEnglish cuenta con múltiples herramientas para que aprendas ingles desde cero, o para que mejores tu
+            comprensión
+            y pronunciación del idioma a un nivel nativo, está distribuido en 3 secciones, historias de narnia,
+            herramientas y Golden
+            Bridge
+        </p>
 
-        <h6>Primer Paso</h6>
-        <p>Al comenzar cada lección, nos encontraremos con la explicación principal acompañada de un audio, lo que se debe hacer es escucharlo mientras se lee el texto, si no se entiende una palabra, se da doble click en ella y mostrará su significado en español.</p>
+        <div class="row">
+            <div class="card col-lg-4 col-md-4 col-md-12 border-none mb-3">
+                <img src="./img/historias_narnia.jpg" class="card-img-top img-thumbnail shadow-blue-dark"
+                    alt="img_historias_narnia">
+                <div class="border-dashed-l border-dashed-r border-dashed-b">
+                    <h5 class="card-title-course titles mt-2 mb-0">Historias de Narnia</h5>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            Historias interactivas para entrenar el oido y aumentar la confianza al hablar, cuenta con
+                            12 historias, cada una con una duración de 1 a 2 semanas.
+                        </li>
+                        <li class="list-group-item"><b>Autor:</b> Kale Anders</li>
+                        <li class="list-group-item"><b>Pronunciación:</b> Americana</li>
+                        <li class="list-group-item">
+                            <button class="btn btn-sm btn-primary all-w background-blue-dark">
+                                <a href="./pages/narnia.html" class="text-white">Entrar al curso</a>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
-        <h6>Segundo Paso</h6>
-        <p>Escuchar la parte 2 de la lección, está es un resumen de la historia principal y dura de 3 a 4 minutos, repetir la historia 4 o 5 veces por día hasta que ya no se necesite la transcripción.</p>
+            <div class="card col-lg-4 col-md-4 col-md-12 border-none mb-3">
+                <img src="./img/herramientas.jpg" class="card-img-top img-thumbnail shadow-blue-dark"
+                    alt="img_herramientas">
+                <div class="border-dashed-l border-dashed-r border-dashed-b">
+                    <h5 class="card-title-course titles mt-2 mb-0">Herramientas</h5>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            Recopilación de los mejores canales de Youtube que enseñan ingles
+                        </li>
+                        <li class="list-group-item">
+                            Jugar con vídeos musicales en ingles
+                        </li>
+                        <li class="list-group-item">
+                            Historias interactivas Britanicas
+                        </li>
+                        <li class="list-group-item mb-2">
+                            Escuchar la correcta pronunciación Britanica, enlaces a la platafora de Golden Bridge,
+                            interactios de facebook, etc...
+                        </li>
 
-        <h6>Tercer Paso</h6>
-        <p>Escuchar la parte 3 de la lección, está contiene preguntas que se deben responder junto con el audio, practicar 20 minutos diarios hasta que sepamos todas las respuestas de memoria.</p>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card col-lg-4 col-md-4 col-md-12 border-none mb-3">
+                <img src="./img/golden_bridge.jpg" class="card-img-top img-thumbnail shadow-blue-dark"
+                    alt="img_golden_bridge">
+                <div class="border-dashed-l border-dashed-r border-dashed-b">
+                    <h5 class="card-title-course titles mt-2 mb-0">Golden Bridge</h5>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            Programa intensivo "English for everyone", cuenta con 3 libros de profundización y
+                            comprensión del inglés, (es necesario tener el material físico).
+                        </li>
+                        <li class="list-group-item"><b>Autor:</b> Golden Bridge</li>
+                        <li class="list-group-item"><b>Pronunciación:</b> Americana</li>
+                        <li class="list-group-item">
+                            <button class="btn btn-sm btn-primary all-w background-blue-dark">
+                                <a href="./pages/goldenbridge.html" class="text-white">Entrar al curso</a>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
         <h2 class="titles">Historia de Genios</h2>
         <div class="row row-cols-1 row-cols-md-2">
             <div class="col mb-4">
-                <iframe title="Elon Musk" src="https://open.spotify.com/embed-podcast/episode/43zp0NvwvGIz4koDtxFlWH" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <iframe title="Elon Musk" src="https://open.spotify.com/embed-podcast/episode/43zp0NvwvGIz4koDtxFlWH"
+                    width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
             </div>
             <div class="col mb-4">
-                <iframe title="Alan Turing" src="https://open.spotify.com/embed-podcast/show/5QpK2Gzpp3cpnNWHW3G7nn" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <iframe title="Alan Turing" src="https://open.spotify.com/embed-podcast/show/5QpK2Gzpp3cpnNWHW3G7nn"
+                    width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
             </div>
         </div>
 
         <h2 class="titles">Historias Conspirativas</h2>
         <div class="row row-cols-1 row-cols-md-2">
             <div class="col mb-4">
-                <iframe title="Projet MKUltra" src="https://open.spotify.com/embed-podcast/episode/3GXcdIdNZKyYbSPkDkLHYA" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <iframe title="Projet MKUltra"
+                    src="https://open.spotify.com/embed-podcast/episode/3GXcdIdNZKyYbSPkDkLHYA" width="100%"
+                    height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
             </div>
             <div class="col mb-4">
-                <iframe title="Area 51" src="https://open.spotify.com/embed-podcast/episode/28e5sIXXWtLZqg3aqHq431" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <iframe title="Area 51" src="https://open.spotify.com/embed-podcast/episode/28e5sIXXWtLZqg3aqHq431"
+                    width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
             </div>
             <div class="col mb-4">
-                <iframe title="Illuminati" src="https://open.spotify.com/embed-podcast/episode/0TXqfIv8SwukUOJ3P1OZQN" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <iframe title="Illuminati" src="https://open.spotify.com/embed-podcast/episode/0TXqfIv8SwukUOJ3P1OZQN"
+                    width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
             </div>
             <div class="col mb-4">
-                <iframe title="The Death of kurt Cabain" src="https://open.spotify.com/embed-podcast/episode/7lS68oxMHDsYZr4pMCusP8" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <iframe title="The Death of kurt Cabain"
+                    src="https://open.spotify.com/embed-podcast/episode/7lS68oxMHDsYZr4pMCusP8" width="100%"
+                    height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
             </div>
             <div class="col mb-4">
-                <iframe title="The Manjattan Project" src="https://open.spotify.com/embed-podcast/episode/6Vh79dL2AZoQvNHgd7ZEQK" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <iframe title="The Manjattan Project"
+                    src="https://open.spotify.com/embed-podcast/episode/6Vh79dL2AZoQvNHgd7ZEQK" width="100%"
+                    height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
             </div>
             <div class="col mb-4">
-                <iframe title="The Cancer Cure" src="https://open.spotify.com/embed-podcast/episode/42Et8tGQsq3qPeVehKXCjP" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <iframe title="The Cancer Cure"
+                    src="https://open.spotify.com/embed-podcast/episode/42Et8tGQsq3qPeVehKXCjP" width="100%"
+                    height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
             </div>
         </div>
 
         <h2 class="titles">Historias Infantiles</h2>
         <div class="row row-cols-1 row-cols-md-2">
             <div class="col mb-4">
-                <iframe title="Infantil 1" src="https://open.spotify.com/embed-podcast/show/23zdIqNUb0riR51woKIEoF"    width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <iframe title="Infantil 1" src="https://open.spotify.com/embed-podcast/show/23zdIqNUb0riR51woKIEoF"
+                    width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
             </div>
             <div class="col mb-4">
-                <iframe title="Infantil 2" src="https://open.spotify.com/embed-podcast/episode/3HdH0N7BYcJZ3BuauScLsl" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <iframe title="Infantil 2" src="https://open.spotify.com/embed-podcast/episode/3HdH0N7BYcJZ3BuauScLsl"
+                    width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
             </div>
             <div class="col mb-4">
-                <iframe title="Infantil 3" src="https://open.spotify.com/embed-podcast/episode/3ukjQXjsyz8bBxUesY6aD0" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <iframe title="Infantil 3" src="https://open.spotify.com/embed-podcast/episode/3ukjQXjsyz8bBxUesY6aD0"
+                    width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
             </div>
             <div class="col mb-4">
-                <iframe title="Infantil 4" src="https://open.spotify.com/embed-podcast/episode/3eVvka4Rz0SHcoe7ckrndR" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <iframe title="Infantil 4" src="https://open.spotify.com/embed-podcast/episode/3eVvka4Rz0SHcoe7ckrndR"
+                    width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
             </div>
             <div class="col mb-4">
-                <iframe title="Infantil 5" src="https://open.spotify.com/embed-podcast/episode/3eVvka4Rz0SHcoe7ckrndR" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <iframe title="Infantil 5" src="https://open.spotify.com/embed-podcast/episode/3eVvka4Rz0SHcoe7ckrndR"
+                    width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
             </div>
         </div>
     </div>
     <!-- Fin : Cotenido -->
 
-    <!-- Install button, hidden by default -->
-    <div id="installContainer" class="hidden">
-        <button id="butInstall" type="button">
-            Install
-        </button>
-    </div>
-
     <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
 
