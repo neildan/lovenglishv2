@@ -1,74 +1,61 @@
-document.cookie = 'same-site-cookie=foo; SameSite=Lax';
-document.cookie = 'cross-site-cookie=bar; SameSite=None; Secure';
-
-const divInstall = document.getElementById('installContainer');
-const butInstall = document.getElementById('butInstall');
-
-window.addEventListener('beforeinstallprompt', (event) => {
-    console.log('👍', 'beforeinstallprompt', event);
-    // Stash the event so it can be triggered later.
-    window.deferredPrompt = event;
-    // Remove the 'hidden' class from the install button container
-    divInstall.classList.toggle('hidden', false);
-});
-
-butInstall.addEventListener('click', () => {
-    console.log('👍', 'butInstall-clicked');
-    const promptEvent = window.deferredPrompt;
-    if (!promptEvent) {
-        // The deferred prompt isn't available.
-        return;
+$(function () {
+    /**
+     * Registrar el Service Worker
+     * @author Daniel Valencia <2020/07/16>
+     */
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('./sw.js', { scope: './' })
+            .then()
+            .catch(err => {
+                console.log("Service Worker Failed to Register", err);
+            })
     }
-    // Show the install prompt.
-    promptEvent.prompt();
-    // Log the result
-    promptEvent.userChoice.then((result) => {
-        console.log('👍', 'userChoice', result);
-        // Reset the deferred prompt variable, since
-        // prompt() can only be called once.
-        window.deferredPrompt = null;
-        // Hide the install button.
-        divInstall.classList.toggle('hidden', true);
+
+    /**
+     * Definir las cookies
+     */
+    document.cookie = 'same-site-cookie=foo; SameSite=Lax';
+    document.cookie = 'cross-site-cookie=bar; SameSite=None; Secure';
+
+    var deferredPrompt;
+
+    /**
+     * Si la PWA todavía no está instalada.
+     * @author Daniel Valencia <2020/07/16>
+     */
+    window.addEventListener('beforeinstallprompt', (event) => {
+        event.preventDefault();
+        deferredPrompt = event;
+        seeInstallationButton()
     });
-});
 
-window.addEventListener('appinstalled', (event) => {
-    console.log('👍', 'appinstalled', event);
-});
+    /**
+     * Cuando se de click en el botón de instalación
+     * Se habilitará la opción del navegador para instalar
+     * @author Daniel Valencia <2020/07/16>
+     */
+    $("#butInstall").on("click", function () {
+        if (deferredPrompt === undefined) return;
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then(function (choiceResult) {
+            deferredPrompt = null;
+            seeInstallationButton(true)
+        });
+    })
 
+    /**
+     * Habilita la visualización del botón de instalación
+     * @param Boolean see
+     * @author Daniel Valencia <2020/07/16>
+     */
+    function seeInstallationButton(see = false) {
+        let classNoShow = "hidden"
+        let buttonInstall = $("#installContainer")
 
-if ('serviceWorker' in navigator) {
-
-    navigator.serviceWorker
-        .register('./sw.js', { scope: './' })
-        .then(function (registration) {
-            console.log("Service Worker Registered");
-        })
-        .catch(function (err) {
-            console.log("Service Worker Failed to Register", err);
-        })
-
-}
-
-// Function to perform HTTP request
-var get = function (url) {
-    return new Promise(function (resolve, reject) {
-
-        var xhr = new XMLHttpRequest();
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState === XMLHttpRequest.DONE) {
-                if (xhr.status === 200) {
-                    var result = xhr.responseText
-                    result = JSON.parse(result);
-                    resolve(result);
-                } else {
-                    reject(xhr);
-                }
-            }
-        };
-
-        xhr.open("GET", url, true);
-        xhr.send();
-
-    });
-};
+        if (see && !buttonInstall.hasClass(classNoShow)) {
+            buttonInstall.addClass(classNoShow)
+        } else if (!see && buttonInstall.hasClass(classNoShow)) {
+            buttonInstall.removeClass(classNoShow)
+        }
+    }
+})
